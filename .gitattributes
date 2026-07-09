@@ -1,0 +1,7 @@
+# Force binary treatment for image files (prevent CRLF corruption)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.safetensors binary
