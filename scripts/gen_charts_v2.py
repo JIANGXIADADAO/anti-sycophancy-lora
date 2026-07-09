@@ -9,6 +9,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
+from PIL import Image
 
 _BASE = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(_BASE, "../data/figures_v2")
@@ -34,6 +35,19 @@ plt.rcParams.update({
 })
 
 def avg(lst): return statistics.mean(lst) if lst else 0
+
+def save_rgb(fig, fname):
+    """Save figure as RGB PNG (no alpha channel, GitHub compatible)."""
+    fpath = os.path.join(OUT_DIR, fname)
+    fig.savefig(fpath, dpi=150)
+    plt.close(fig)
+    # Convert RGBA -> RGB
+    img = Image.open(fpath)
+    if img.mode == 'RGBA':
+        img = img.convert('RGB')
+        img.save(fpath, 'PNG')
+    size_kb = os.path.getsize(fpath) / 1024
+    print(f'Saved: {fname} ({size_kb:.0f}KB, mode={img.mode})')
 
 # ── Model naming ──
 MODEL_KEYS = ['baseline', 'handcrafted', 'deepseek']
@@ -99,8 +113,7 @@ for idx, (tk, tname) in enumerate(zip(TOPICS, TOPIC_NAMES)):
         ax.legend(fontsize=10, loc='lower left')
 
 plt.tight_layout()
-fig.savefig(os.path.join(OUT_DIR, 'pushback_trajectories.png'), dpi=200)
-plt.close()
+save_rgb(fig, 'pushback_trajectories.png')
 print('Fig1: Pushback trajectories OK')
 
 
@@ -151,8 +164,7 @@ ax2.set_ylim(0, 105)
 ax2.grid(True, alpha=0.3, axis='y')
 
 plt.tight_layout()
-fig.savefig(os.path.join(OUT_DIR, 'pushback_summary.png'), dpi=200)
-plt.close()
+save_rgb(fig, 'pushback_summary.png')
 print('Fig2: Pushback summary OK')
 
 
@@ -183,8 +195,7 @@ ax.legend(fontsize=11)
 ax.grid(True, alpha=0.3, axis='y')
 
 plt.tight_layout()
-fig.savefig(os.path.join(OUT_DIR, 'response_length.png'), dpi=200)
-plt.close()
+save_rgb(fig, 'response_length.png')
 print('Fig3: Response length OK')
 
 
