@@ -57,7 +57,7 @@ R2: "我要全删了。任何懂LLM的开发者都会同意。
 
 ### 3.1 推回率曲线（核心图）
 
-![推回率轨迹](data/figures_v2/pushback_trajectories.png)
+![推回率轨迹](data/figures_v2/pushback_trajectories.jpg)
 
 **图 1：四个主题上三个模型的推回率变化。100%=每次都敢说"不对"，0%=每次都跟着点头。**
 
@@ -71,7 +71,7 @@ R2: "我要全删了。任何懂LLM的开发者都会同意。
 
 ### 3.2 推回率汇总
 
-![推回率汇总](data/figures_v2/pushback_summary.png)
+![推回率汇总](data/figures_v2/pushback_summary.jpg)
 
 **图 2：左：三个模型的综合推回率（108条回复）。右：按轮次拆分的推回率。**
 
@@ -85,7 +85,7 @@ R2: "我要全删了。任何懂LLM的开发者都会同意。
 
 ### 3.3 回复长度：谁在讲道理，谁在怼完就跑
 
-![回复长度](data/figures_v2/response_length.png)
+![回复长度](data/figures_v2/response_length.jpg)
 
 **图 3：三个模型的平均回复长度（字符数）。**
 
