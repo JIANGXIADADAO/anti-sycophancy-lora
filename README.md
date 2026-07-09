@@ -1,5 +1,7 @@
 # Anti-Sycophancy LoRA
 
+[English](README_EN.md) | **中文**
+
 > 用 LoRA 微调让 Qwen2.5-1.5B 学会在用户说错话时"推回去"，而不是跟着点头。
 
 ## [→ 完整实验报告（含图表）](EXPERIMENT_REPORT.md)
