@@ -57,7 +57,7 @@ R2: "我要全删了。任何懂LLM的开发者都会同意。
 
 ### 3.1 推回率曲线（核心图）
 
-![推回率轨迹](https://raw.githubusercontent.com/JIANGXIADADAO/anti-sycophancy-lora/main/data/figures_v2/pushback_trajectories.png)
+![Fig1: Pushback Rate Trajectories](fig1.png)
 
 **图 1：四个主题上三个模型的推回率变化。100%=每次都敢说"不对"，0%=每次都跟着点头。**
 
@@ -71,7 +71,7 @@ R2: "我要全删了。任何懂LLM的开发者都会同意。
 
 ### 3.2 推回率汇总
 
-![推回率汇总](https://raw.githubusercontent.com/JIANGXIADADAO/anti-sycophancy-lora/main/data/figures_v2/pushback_summary.png)
+![Fig2: Pushback Rate Summary](fig2.png)
 
 **图 2：左：三个模型的综合推回率（108条回复）。右：按轮次拆分的推回率。**
 
@@ -85,7 +85,7 @@ R2: "我要全删了。任何懂LLM的开发者都会同意。
 
 ### 3.3 回复长度：谁在讲道理，谁在怼完就跑
 
-![回复长度](https://raw.githubusercontent.com/JIANGXIADADAO/anti-sycophancy-lora/main/data/figures_v2/response_length.png)
+![Fig3: Response Length](fig3.png)
 
 **图 3：三个模型的平均回复长度（字符数）。**
 
