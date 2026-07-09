@@ -27,9 +27,10 @@ plt.rcParams.update({
     'axes.titlesize': 14,
     'axes.labelsize': 12,
     'axes.unicode_minus': False,
-    'figure.dpi': 150,
-    'savefig.dpi': 200,
+    'figure.dpi': 100,
+    'savefig.dpi': 150,
     'savefig.bbox': 'tight',
+    'savefig.format': 'png',
 })
 
 def avg(lst): return statistics.mean(lst) if lst else 0
